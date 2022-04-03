@@ -14,6 +14,12 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
+/* Stap 1 : placeholder maken voor de uitkomst (aantal cumlauderapporten)
+   Stap 2 : functie maken die conditie checkt uit de array of 8 of hoger is. function gradesCheck (grade){}
+   stap 3 : functie in de forloop for uitkomst voor functie grades check. if true ++
+   stap 4 : Het aantal overeenkomsten wordt bij elkaar opgeteld en return in een variabele.
+   Stap 5 : variabele is de uitkomst rapporten
+ */
 // ---- Verwachte uitkomst: 6
 
 
