@@ -10,6 +10,36 @@
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
 
+/* stap 1 placeholder voor resultaat maken = domeinnaam uit email.
+   Stap 2 functie die checkt: achter @ weergeeft string ;
+   Stap 3 Het resultaat van dit weglaten wordt weergeven in onze placeholder domeinnaam
+ */
+
+
+
+let domeinnaam = 0;
+let emails=["n.eeken@novi-education.nl", "t.mellink@novi.nl","a.wiersma@outlook.com"
+];
+
+// functie gedeclareerd
+
+function getEmailDomain(email){
+    let domeinNaam = email.substring(email.indexOf("@")+1);
+    console.log(domeinNaam);
+};
+
+//for loop met functie
+
+for (let i = 0; i < emails.length; i++) {
+    getEmailDomain(emails[i]);
+
+};
+
+
+
+
+
+
 
 
 /* Opdracht  2 */
@@ -19,6 +49,12 @@
 // typeOfEmail("t.mellink@novi.nl") geeft geeft "Medewerker"
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
+
+/* Stap 1 : Functie declareren
+   stap 2: een variabelen die de uitkomst weergeeft.
+   Stap 3 : statements opschrijven die checkt of het een medewerker is. met de stringmethod
+   stap 3
+ */
 
 
 
