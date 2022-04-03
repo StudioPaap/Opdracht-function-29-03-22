@@ -2,7 +2,6 @@
 // maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
 // Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
 
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 /* Opdracht  1: Cum Laude */
 
@@ -16,6 +15,37 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+/* stap 1: Array volledig checken met loop.
+   Stap 2: conditie gecheckt worden of het cijfer in de array 8 en hoger is dan 8
+   stap 3; Als het true is, wordt er een waarde ++ toegevoegd zodat ze geteld kunnen worden
+   stap 4 : Het resultaat moet worden gelogd in eht antwoord
+ */
+
+const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+let cumlaudeGrades = 0;
+
+//functie voor het checken of de grades groter zijn of gelijk + teller
+function checkNumberCumlaude(grades){
+    if (grades === 8) {
+        return cumlaudeGrades++
+    }
+    if (grades === 9) {
+        return cumlaudeGrades++
+    }
+    if (grades === 10) {
+        return cumlaudeGrades++
+    }
+}
+
+//functie wordt aangeroepen in een loop
+for (i=0; i<grades.length; i++){
+    checkNumberCumlaude(grades[i]);
+    console.log(cumlaudeGrades);
+}
+
+
+checkNumberCumlaude(8,9,6,6,10);
+console.log(cumlaudeGrades);
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
@@ -39,10 +69,6 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
-
-// ---- Verwachte uitkomst: 6.642857142857143
-
-
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
@@ -57,6 +83,23 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
+
+
+const sum = grades.reduce((a, b) => a + b, 0);
+const avg = (sum / grades.length) || 0;
+
+console.log(` Het gemiddelde is: ${avg}.`);
+// ---- Verwachte uitkomst: 6.642857142857143
+
+function getAverageGrades(grades){
+    const sum = grades.reduce((a, b) => a + b, 0);
+    const avg = (sum / grades.length) || 0;
+
+    console.log(` Het gemiddelde is: ${avg.toFixed(2)}.`);
+};
+
+getAverageGrades([8,0,9]);
+
 
 
 
